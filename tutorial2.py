@@ -6,6 +6,14 @@ green = Color(0x00ff00, 1.0)
 blue = Color(0x0000ff, 1.0)
 black = Color(0x000000, 1.0)
 
+thinline = LineStyle(1, black)
+mycircle = CircleAsset(5, thinline, blue)
+yourcircle = CircleAsset(7.5, thinline, red)
+xcoordinates = range(100, 600, 20)
+ycoordinates = range(50, 500, 15)
+
+sprites = [Sprite(mycircle, (x, x*0.5 + 100)) for x in xcoordinates]
+spritess = [Sprite(yourcircle, (x, x*1 + 75)) for x in ycoordinates]
 
 myapp = App()
 myapp.run()
